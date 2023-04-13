@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Emoji</title>
-	<style>
-		body {
-			background-color: green;
-			height: 100vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px;
-			box-sizing: border-box;
-		}
-		.emoji {
-			display: inline-block;
-			font-size: 20vh;
-			animation: grow-shrink 2s linear infinite;
-		}
-		.emoji-container {
-			color: white;
-			text-align: center;
-			height: 80%;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.inspired-by {
-			font-size: 4vh;
-			margin: 0;
-			padding: 10px;
-			box-sizing: border-box;
-			background-color: rgba(255, 255, 255, 0.3);
-			border-radius: 5px;
-			align-self: flex-end;
-		}
-		@keyframes grow-shrink {
-			0% {
-				transform: scale(1);
-			}
-			50% {
-				transform: scale(1.5);
-			}
-			100% {
-				transform: scale(1);
-			}
-		}
-	</style>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TGZSTQY0BD"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji</title>
+  <style>
+    body {
+      background-color: green;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
-		gtag('config', 'G-TGZSTQY0BD');
-	</script>
+    .emoji {
+      display: inline-block;
+      font-size: 20vh;
+      animation: grow-shrink 2s linear infinite;
+    }
+
+    .emoji-container {
+      color: white;
+      text-align: center;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .inspired-by {
+      font-size: 4vh;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      position: fixed;
+      bottom: 0;
+    }
+
+    @keyframes grow-shrink {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGZSTQY0BD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TGZSTQY0BD');
+  </script>
 </head>
 <body>
-	<div class="emoji-container">
-		<span class="emoji">&#128046;</span>
-		<span class="emoji">&#127838;</span>
-		<span class="emoji">&#129472;</span>
-		<span class="emoji">&#127828;</span>
-	</div>
-	<p class="inspired-by">Inspired by <a href="https://&#128046.ws">&#128046.ws</a></p>
+  <div class="emoji-container">
+    <span class="emoji">&#128046;</span>
+    <span class="emoji">&#127838;</span>
+    <span class="emoji">&#129472;</span>
+    <span class="emoji">&#127828;</span>
+  </div>
+  <p class="inspired-by">Inspired by <a href="https://&#128046.ws">&#128046.ws</a></p>
 </body>
 </html>

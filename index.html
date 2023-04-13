@@ -1,54 +1,74 @@
- <!-- Inspired by https://xn--2o8h.ws/ -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,user-scalable=no">
-  <title>&#127828;</title>
-  <style type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji</title>
+  <style>
     body {
-    background-color: green;
-    display: table;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    position: fixed;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  div {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    font-size: 10vw;
-    cursor: default;
-  }
+      background-color: green;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
-  a:visited {
-    color: white;
-  }
-</style>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TGZSTQY0BD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    .emoji {
+      display: inline-block;
+      font-size: 20vh;
+      animation: grow-shrink 2s linear infinite;
+    }
 
-  gtag('config', 'G-TGZSTQY0BD');
-</script>
+    .emoji-container {
+      color: white;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .inspired-by {
+      font-size: 4vh;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      position: fixed;
+      bottom: 0;
+    }
+
+    @keyframes grow-shrink {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGZSTQY0BD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TGZSTQY0BD');
+  </script>
 </head>
 <body>
-<div style="font-size: 10vw;color: white;vertical-align: middle;text-align:center" >
-  &#128046; + &#127838; + &#129472; = &#127828;
-  <P><font style="font-size: 2vw">Inspired by <a href="https://&#128046.ws">&#128046.ws</a></font></P>
-</div>
+  <div class="emoji-container">
+    <span class="emoji">&#128046;</span>
+    <span class="emoji">&#127838;</span>
+    <span class="emoji">&#129472;</span>
+    <span class="emoji">&#127828;</span>
+  </div>
+  <p class="inspired-by">Inspired by <a href="https://&#128046.ws">&#128046.ws</a></p>
 </body>
 </html>
